@@ -1,0 +1,8 @@
+# Desactivar navegación por carpetas
+Options -Indexes
+
+# Activamos modo de reescritura
+RewriteEngine on
+
+# Redirigimos todas las peticiones al index.php y capturamos la solicitud en una variable "url"
+RewriteRule ^([a-zA-Z0-9/-]+)$ index.php?url=$1 [L]
